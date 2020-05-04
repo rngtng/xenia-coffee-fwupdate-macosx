@@ -1,7 +1,7 @@
 echo "-----------------------------------------"
 echo "Reset COM-PORT"
 echo "-----------------------------------------"
-./due-reset /dev/tty.usbmodem14101
+./due-reset /dev/tty.usbmodem143101
 
 ./bossac -U true -e -w -v -b xenia.bin
 
