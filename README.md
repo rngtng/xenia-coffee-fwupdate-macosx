@@ -54,6 +54,21 @@ Upload Firmware erfolgreich
 -----------------------------------------
 ```
 
+## Monitor
+
+Additional a simple serial monitor script in ruby is included.
+
+### Setup
+
+```
+gem install serialport
+````
+
+### Usage
+
+```
+./monitor.rb /dev/tty.usbmodem143101
+```
 
 ## Background
 

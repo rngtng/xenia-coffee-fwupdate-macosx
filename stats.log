@@ -1,0 +1,71 @@
+PowerButton toggled to: 1
+[1827:594] Switched to: INIT
+
+EPROM FastRecover
+--------------> EEDATA SAVE <------------------
+--------------> eedata->header.lengthIntArray= 8
+EPROM SAVE
+mit allDataSize = 32
+SAVE: Flag FastRecoverMode->111
+millis()                  : 1827599
+StandByTime Start         : 667488
+RestStandByTime v.S.      : 0
+--------------------------
+[1827:599] Switched to: STANDBY
+[1827:599] BrewgroupHeating switched to: 1
+0-thermostatStatus -> 1
+[1827:600] BoilerHeating switched to: 1
+PowerButton toggled to: 0
+PowerOff-1
+[1838:742] Switched to: PRE_POWER_OFF
+PRE_POWER_OFF
+[1838:742] BoilerHeating switched to: 0
+[1838:742] BrewgroupHeating switched to: 0
+
+==========================================
+VERSION                    : 1.9.2
+==========================================
+
+==========================================
+Bezugslänge               : 30
+Betriebsszeit in Minuten  : 75270
+Betriebsszeit in Stunden  : 1254
+Zähler Bezüge             : 1104
+Zähler Heizungsrelais     : 0
+Zähler Pumpe > 60 Sekunden: 1
+MAX_INT_ARRAY_NUMBER: -1168528788
+------------------------------------------
+FIRST_STARTUP-Parameter
+RestartOnPowerLoss        : 0=kein Autostart (0)
+MachineStateOnInit        : 111=Stromausfall (111)
+==========================================
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 1:0
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 8:0
+Beim Start EPROM LOAD   :EpromLoad erfolgreich
+InitSave (initCreateDefaultsSave)  :EepromData->save() aufgerufen =
+-999
+
+StandByTime Start         : 2
+RestStandByTime v.S.      : 0
+--------------------------
+
+POWER OFF EPROM - TimeOfLevelChaneButton=249
+[1838:991] Switched to: POWER_OFF
+*------PRE POWER OFF------*
+Enter PowerDown / POWER_OFF
+
+
+
+--------------> EEDATA SAVE <------------------
+--------------> eedata->header.lengthIntArray= 8
+EPROM SAVE
+mit allDataSize = 32
+[1839:998] PowerOffStep: 1
+[1840:999] PowerOffStep: 2
+[1842:  0] PowerOffStep: 3
+[1843:  1] PowerOffStep: 4
+[1844:  2] PowerOffStep: 5
+[1845:  3] PowerOffStep: 6
+[1846:  4] PowerOffStep: 7
+[1847:  5] PowerOffStep: 8
+[1848:  6] PowerOffStep: 9
