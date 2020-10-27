@@ -1,0 +1,254 @@
+❯ ./monitor.rb /dev/tty.usbmodem143101
+./monitor.rb:17: warning: constant ::TRUE is deprecated
+Opt1Button toggled to: 1
+tmpHeatingButtonHL = true
+tmpHeatingButtonHL = false
+PowerButton toggled to: 0
+PowerOff-1
+[  72:985] Switched to: PRE_POWER_OFF
+PRE_POWER_OFF
+[  72:985] BoilerHeating switched to: 0
+[  72:985] BrewgroupHeating switched to: 0
+
+==========================================
+VERSION                    : 1.9.2
+==========================================
+
+==========================================
+Bezugslänge               : 30
+Betriebsszeit in Minuten  : -30
+Betriebsszeit in Stunden  : 0
+Zähler Bezüge             : -1
+Zähler Heizungsrelais     : -1
+Zähler Pumpe > 60 Sekunden: -1
+MAX_INT_ARRAY_NUMBER: 1045013230
+------------------------------------------
+FIRST_STARTUP-Parameter
+RestartOnPowerLoss        : 0=kein Autostart (0)
+MachineStateOnInit        : 111=Stromausfall (111)
+==========================================
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 1:0
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 8:0
+Beim Start EPROM LOAD   :EpromLoad erfolgreich
+InitSave (initCreateDefaultsSave)  :EepromData->save() aufgerufen =
+-999
+
+StandByTime Start         : 2
+RestStandByTime v.S.      : 0
+--------------------------
+
+*------PRE POWER OFF------*
+****startPowerOff                    : 73185
+****millis                    : 79186
+[  79:186] Switched to: POWER_OFF
+~~~~~~ PRE -> POWER OFF ~~~~~
+Enter PowerDown / POWER_OFF
+
+
+
+--------------> EEDATA SAVE <------------------
+--------------> eedata->header.lengthIntArray= 8
+EPROM SAVE
+mit allDataSize = 32
+[  80:192] PowerOffStep: 1
+[  81:193] PowerOffStep: 2
+[  82:194] PowerOffStep: 3
+[  83:195] PowerOffStep: 4
+[  84:196] PowerOffStep: 5
+[  85:197] PowerOffStep: 6
+[  86:198] PowerOffStep: 7
+[  87:199] PowerOffStep: 8
+[  88:200] PowerOffStep: 9
+PowerButton toggled to: 1
+[ 104:501] Switched to: INIT
+
+EPROM FastRecover
+--------------> EEDATA SAVE <------------------
+--------------> eedata->header.lengthIntArray= 8
+EPROM SAVE
+mit allDataSize = 32
+SAVE: Flag FastRecoverMode->111
+millis()                  : 104507
+StandByTime Start         : 25310
+RestStandByTime v.S.      : 0
+--------------------------
+[ 104:507] Switched to: STANDBY
+[ 104:507] BrewgroupHeating switched to: 1
+0-thermostatStatus -> 1
+[ 104:507] BoilerHeating switched to: 1
+Beep!
+Opt1Button toggled to: 0
+tmpHeatingButtonHL = true
+tmpHeatingButtonHL = false
+PowerButton toggled to: 0
+PowerOff-1
+[ 138:702] Switched to: PRE_POWER_OFF
+PRE_POWER_OFF
+[ 138:702] BoilerHeating switched to: 0
+[ 138:702] BrewgroupHeating switched to: 0
+
+==========================================
+VERSION                    : 1.9.2
+==========================================
+
+==========================================
+Bezugslänge               : 30
+Betriebsszeit in Minuten  : -30
+Betriebsszeit in Stunden  : 0
+Zähler Bezüge             : -1
+Zähler Heizungsrelais     : -1
+Zähler Pumpe > 60 Sekunden: -1
+MAX_INT_ARRAY_NUMBER: 1045013230
+------------------------------------------
+FIRST_STARTUP-Parameter
+RestartOnPowerLoss        : 0=kein Autostart (0)
+MachineStateOnInit        : 111=Stromausfall (111)
+==========================================
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 1:0
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 8:0
+Beim Start EPROM LOAD   :EpromLoad erfolgreich
+InitSave (initCreateDefaultsSave)  :EepromData->save() aufgerufen =
+-999
+
+StandByTime Start         : 2
+RestStandByTime v.S.      : 0
+--------------------------
+
+POWER OFF EPROM - TimeOfLevelChaneButton=208
+[ 138:910] Switched to: POWER_OFF
+*------PRE POWER OFF------*
+Enter PowerDown / POWER_OFF
+
+
+
+--------------> EEDATA SAVE <------------------
+--------------> eedata->header.lengthIntArray= 8
+EPROM SAVE
+mit allDataSize = 32
+[ 139:916] PowerOffStep: 1
+[ 140:917] PowerOffStep: 2
+[ 141:918] PowerOffStep: 3
+[ 142:919] PowerOffStep: 4
+[ 143:920] PowerOffStep: 5
+[ 144:921] PowerOffStep: 6
+[ 145:922] PowerOffStep: 7
+[ 146:923] PowerOffStep: 8
+[ 147:924] PowerOffStep: 9
+
+
+^CTraceback (most recent call last):
+	1: from ./monitor.rb:18:in `<main>'
+./monitor.rb:18:in `gets': Interrupt
+
+
+~/Projects/xenia-coffee-fwupdate-macosx master* ⇡ 1m 30s
+❯ ./flash.sh
+-----------------------------------------
+Reset COM-PORT
+-----------------------------------------
+Device found on cu.usbmodem143101
+Atmel SMART device 0x285e0a60 found
+Erase flash
+done in 0.018 seconds
+
+Write 63860 bytes to flash (250 pages)
+[==============================] 100% (250/250 pages)
+done in 5.209 seconds
+
+Verify 63860 bytes of flash
+[==============================] 100% (250/250 pages)
+Verify successful
+done in 4.105 seconds
+Set boot flash true
+-----------------------------------------
+Upload Firmware erfolgreich
+-----------------------------------------
+
+~/Projects/xenia-coffee-fwupdate-macosx master* ⇡ 15s
+❯ ./monitor.rb /dev/tty.usbmodem143101
+./monitor.rb:17: warning: constant ::TRUE is deprecated
+Traceback (most recent call last):
+	1: from ./monitor.rb:18:in `<main>'
+./monitor.rb:18:in `gets': Device not configured @ io_fillbuf - fd:9  (Errno::ENXIO)
+
+~/Projects/xenia-coffee-fwupdate-macosx master* ⇡ 39s
+❯ ./monitor.rb /dev/tty.usbmodem143101
+./monitor.rb:17: warning: constant ::TRUE is deprecated
+PowerButton toggled to: 1
+[  18:325] Switched to: INIT
+
+EPROM FastRecover
+--------------> EEDATA SAVE <------------------
+--------------> eedata->header.lengthIntArray= 8
+EPROM SAVE
+mit allDataSize = 32
+SAVE: Flag FastRecoverMode->111
+millis()                  : 18330
+StandByTime Start         : 12115
+RestStandByTime v.S.      : 0
+--------------------------
+[  18:330] Switched to: STANDBY
+[  18:331] BrewgroupHeating switched to: 1
+0-thermostatStatus -> 1
+[  18:331] BoilerHeating switched to: 1
+Water tank refilled.
+Opt1Button toggled to: 1
+tmpHeatingButtonHL = true
+tmpHeatingButtonHL = false
+PowerButton toggled to: 0
+PowerOff-1
+[  35:399] Switched to: PRE_POWER_OFF
+PRE_POWER_OFF
+[  35:399] BoilerHeating switched to: 0
+[  35:399] BrewgroupHeating switched to: 0
+
+==========================================
+VERSION                    : 1.9.5
+==========================================
+
+==========================================
+Bezugslänge               : 30
+Betriebsszeit in Minuten  : -30
+Betriebsszeit in Stunden  : 0
+Zähler Bezüge             : -1
+Zähler Heizungsrelais     : -1
+Zähler Pumpe > 60 Sekunden: -1
+MAX_INT_ARRAY_NUMBER: -1101417746
+------------------------------------------
+FIRST_STARTUP-Parameter
+RestartOnPowerLoss        : 0=kein Autostart (0)
+MachineStateOnInit        : 0=User-Off
+==========================================
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 1:0
+Beim Start PowerOnLoss [RESTART_ON_POWER_LOSS] 8:0
+Beim Start EPROM LOAD   :EpromLoad erfolgreich
+InitSave (initCreateDefaultsSave)  :EepromData->save() aufgerufen =
+-999
+
+StandByTime Start         : 2
+RestStandByTime v.S.      : 0
+--------------------------
+
+POWER OFF EPROM - TimeOfLevelChaneButton=232
+[  35:631] Switched to: POWER_OFF
+*------PRE POWER OFF------*
+Enter PowerDown / POWER_OFF
+
+
+
+--------------> EEDATA SAVE <------------------
+--------------> eedata->header.lengthIntArray= 8
+EPROM SAVE
+mit allDataSize = 32
+[  36:637] PowerOffStep: 1
+[  37:638] PowerOffStep: 2
+[  38:639] PowerOffStep: 3
+[  39:640] PowerOffStep: 4
+[  40:641] PowerOffStep: 5
+[  41:642] PowerOffStep: 6
+[  42:643] PowerOffStep: 7
+[  43:644] PowerOffStep: 8
+[  44:645] PowerOffStep: 9
+^CTraceback (most recent call last):
+	1: from ./monitor.rb:18:in `<main>'
+./monitor.rb:18:in `gets': Interrupt
