@@ -7,7 +7,7 @@ MacOS X Firmware updater for Xenia Coffee Machine
 
 ## Usage
 
-The script assumes xenia chip is connected on `/dev/tty.usbmodem14101`. If not
+The script assumes xenia chip is connected on `/dev/cu.usbmodem143101`. If not
 you get message:
 
 ```

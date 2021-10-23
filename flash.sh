@@ -1,9 +1,18 @@
-echo "-----------------------------------------"
-echo "Reset COM-PORT"
-echo "-----------------------------------------"
-./due-reset /dev/tty.usbmodem143101
+#!/usr/bin/env bash
 
-./bossac -U true -e -w -v -b xenia.bin
+PORT=/dev/cu.usbmodem143101
+
+echo "-----------------------------------------"
+echo "Reset COM-PORT $PORT"
+echo "-----------------------------------------"
+
+stty -f $PORT 1200
+
+echo "-----------------------------------------"
+echo "Update mit $1"
+echo "-----------------------------------------"
+
+./bossac --port=$PORT -e -w -v -b $1 -R
 
 echo "-----------------------------------------"
 echo "Upload Firmware erfolgreich"

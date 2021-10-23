@@ -14,7 +14,7 @@ sp = SerialPort.new(ARGV[0], 9600, 8, 1, SerialPort::NONE)
 
 # recieve part
 # Thread.new do
- while TRUE do
+ while true do
    while (i = sp.gets) do
      puts i
    end
